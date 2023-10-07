@@ -14,13 +14,14 @@ import java.time.LocalDate;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@SequenceGenerator(name = "PATIENT_GENERATOR", sequenceName = "PATIENT_SEQ", allocationSize = 1)
-public class User {
+@Table(name = "user", schema = "public")
+@SequenceGenerator(name = "USER_GENERATOR", sequenceName = "USER_SEQ", allocationSize = 1)
+public class UserEntity {
 
     @Id
     @Column(name = "usr_id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PATIENT_GENERATOR")
-    private Long usrId;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_GENERATOR")
+    private Integer usrId;
 
     @Column(name = "usr_name")
     private String usrName;
@@ -41,3 +42,4 @@ public class User {
     @Column(name = "usr_last_appointment")
     private LocalDate lastAppointment;
 }
+

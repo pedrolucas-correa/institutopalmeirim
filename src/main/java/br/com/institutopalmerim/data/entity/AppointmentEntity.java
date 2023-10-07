@@ -14,8 +14,9 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "appointment", schema = "public")
 @SequenceGenerator(name = "APPOINTMENT_GENERATOR", sequenceName = "APPOINTMENT_SEQ", allocationSize = 1)
-public class Appointment {
+public class AppointmentEntity {
 
     @Id
     @Column(name = "apt_id")
@@ -23,16 +24,16 @@ public class Appointment {
     private Long aptId;
 
     @Column(name = "apt_description")
-    private String description;
+    private String aptDescription;
 
     @Column(name = "apt_date")
-    private Date date;
+    private Date aptDate;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "apt_location")
-    private Location location;
+    private Location aptLocation;
 
     @ManyToOne
     @JoinColumn(name = "usr_id")
-    private User user;
+    private UserEntity user;
 }

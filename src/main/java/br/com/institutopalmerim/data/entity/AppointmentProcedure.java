@@ -14,6 +14,7 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "appointment_procedure", schema = "public")
 @SequenceGenerator(name = "APPOINTMENT_PROCEDURE_GENERATOR", sequenceName = "APPOINTMENT_PROCEDURE_SEQ", allocationSize = 1)
 public class AppointmentProcedure {
 
@@ -24,15 +25,15 @@ public class AppointmentProcedure {
 
     @ManyToOne
     @JoinColumn(name = "prc_id")
-    private Procedure procedure;
+    private ProcedureEntity procedure;
 
     @ManyToOne
     @JoinColumn(name = "apt_id")
-    private Appointment appointment;
+    private AppointmentEntity appointment;
 
     @Column(name = "app_price")
     private Double appPrice;
 
     @Column(name = "app_date")
-    private Date date;
+    private Date appDate;
 }
