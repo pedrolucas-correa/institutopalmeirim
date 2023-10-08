@@ -1,12 +1,7 @@
 package br.com.institutopalmerim.data.entity;
 
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
+import lombok.*;
 import java.util.Date;
 
 @Entity
@@ -14,14 +9,14 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "appointment_procedure", schema = "public")
+@Table(name = "appointment_procedure", schema = "odonto")
 @SequenceGenerator(name = "APPOINTMENT_PROCEDURE_GENERATOR", sequenceName = "APPOINTMENT_PROCEDURE_SEQ", allocationSize = 1)
 public class AppointmentProcedure {
 
     @Id
     @Column(name = "app_id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "APPOINTMENT_PROCEDURE_GENERATOR")
-    private Long appId;
+    private Integer appId;
 
     @ManyToOne
     @JoinColumn(name = "prc_id")

@@ -1,12 +1,9 @@
 package br.com.institutopalmerim.data.entity;
 
 import br.com.institutopalmerim.data.enums.Location;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
@@ -14,7 +11,7 @@ import java.time.LocalDate;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "user", schema = "public")
+@Table(name = "user", schema = "odonto")
 @SequenceGenerator(name = "USER_GENERATOR", sequenceName = "USER_SEQ", allocationSize = 1)
 public class UserEntity {
 

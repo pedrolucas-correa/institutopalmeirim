@@ -1,18 +1,14 @@
 package br.com.institutopalmerim.data.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "procedure", schema = "public")
+@Table(name = "procedure", schema = "odonto")
 @SequenceGenerator(name = "PROCEDURE_GENERATOR", sequenceName = "PROCEDURE_SEQ", allocationSize = 1)
 public class ProcedureEntity {
 
