@@ -1,9 +1,9 @@
-package br.com.institutopalmeirim.data.repository;
+package br.com.institutopalmeirim.repository;
 
 import java.util.List;
 import java.util.Optional;
 
-import br.com.institutopalmeirim.data.entity.Token;
+import br.com.institutopalmeirim.model.Token;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

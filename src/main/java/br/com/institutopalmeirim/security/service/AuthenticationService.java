@@ -1,11 +1,11 @@
 package br.com.institutopalmeirim.security.service;
 
-import br.com.institutopalmeirim.data.entity.Token;
-import br.com.institutopalmeirim.data.entity.User;
-import br.com.institutopalmeirim.data.enums.Role;
-import br.com.institutopalmeirim.data.enums.TokenType;
-import br.com.institutopalmeirim.data.repository.TokenRepository;
-import br.com.institutopalmeirim.data.repository.UserRepository;
+import br.com.institutopalmeirim.model.Token;
+import br.com.institutopalmeirim.model.User;
+import br.com.institutopalmeirim.enums.Role;
+import br.com.institutopalmeirim.enums.TokenType;
+import br.com.institutopalmeirim.repository.TokenRepository;
+import br.com.institutopalmeirim.repository.UserRepository;
 import br.com.institutopalmeirim.security.auth.model.AuthenticationRequest;
 import br.com.institutopalmeirim.security.auth.model.AuthenticationResponse;
 import br.com.institutopalmeirim.security.auth.model.RegisterRequest;

@@ -1,6 +1,6 @@
 package br.com.institutopalmeirim.security.auth.filter;
 
-import br.com.institutopalmeirim.data.repository.TokenRepository;
+import br.com.institutopalmeirim.repository.TokenRepository;
 import br.com.institutopalmeirim.security.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

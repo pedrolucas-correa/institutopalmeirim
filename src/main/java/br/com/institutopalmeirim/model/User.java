@@ -1,7 +1,8 @@
-package br.com.institutopalmeirim.data.entity;
+package br.com.institutopalmeirim.model;
 
-import br.com.institutopalmeirim.data.enums.Gender;
-import br.com.institutopalmeirim.data.enums.Role;
+import br.com.institutopalmeirim.enums.Gender;
+import br.com.institutopalmeirim.enums.Role;
+import br.com.institutopalmeirim.enums.UserCategory;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -34,12 +35,14 @@ public class User implements UserDetails {
     private String rg;
     @Column(unique = true)
     private String cpf;
+    private String phone;
 
     @Column(unique = true)
     private String email;
     private String password;
 
-    private String phone;
+    @Enumerated(EnumType.STRING)
+    private UserCategory category;
 
     @Enumerated(EnumType.STRING)
     private Role role;

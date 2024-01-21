@@ -1,4 +1,4 @@
-package br.com.institutopalmeirim.data.enums;
+package br.com.institutopalmeirim.enums;
 
 public enum Role {
   ROLE_USER,

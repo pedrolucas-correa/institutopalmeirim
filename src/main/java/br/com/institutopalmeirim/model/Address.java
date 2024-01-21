@@ -1,4 +1,4 @@
-package br.com.institutopalmeirim.data.entity;
+package br.com.institutopalmeirim.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

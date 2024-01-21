@@ -1,6 +1,6 @@
 package br.com.institutopalmeirim.security.config;
 
-import br.com.institutopalmeirim.data.repository.UserRepository;
+import br.com.institutopalmeirim.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

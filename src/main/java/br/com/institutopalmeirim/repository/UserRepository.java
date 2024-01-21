@@ -1,6 +1,6 @@
-package br.com.institutopalmeirim.data.repository;
+package br.com.institutopalmeirim.repository;
 
-import br.com.institutopalmeirim.data.entity.User;
+import br.com.institutopalmeirim.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

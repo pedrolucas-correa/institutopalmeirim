@@ -1,6 +1,6 @@
 package br.com.institutopalmeirim.security.auth.controller;
 
-import br.com.institutopalmeirim.data.enums.Role;
+import br.com.institutopalmeirim.enums.Role;
 import br.com.institutopalmeirim.security.auth.model.AuthenticationRequest;
 import br.com.institutopalmeirim.security.auth.model.AuthenticationResponse;
 import br.com.institutopalmeirim.security.service.AuthenticationService;

@@ -1,6 +1,6 @@
-package br.com.institutopalmeirim.data.entity;
+package br.com.institutopalmeirim.model;
 
-import br.com.institutopalmeirim.data.enums.TokenType;
+import br.com.institutopalmeirim.enums.TokenType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
