@@ -1,4 +1,4 @@
-package br.com.institutopalmeirim.security.auth;
+package br.com.institutopalmeirim.security.service;
 
 import br.com.institutopalmeirim.data.entity.Token;
 import br.com.institutopalmeirim.data.entity.User;
@@ -6,7 +6,9 @@ import br.com.institutopalmeirim.data.enums.Role;
 import br.com.institutopalmeirim.data.enums.TokenType;
 import br.com.institutopalmeirim.data.repository.TokenRepository;
 import br.com.institutopalmeirim.data.repository.UserRepository;
-import br.com.institutopalmeirim.security.config.JwtService;
+import br.com.institutopalmeirim.security.auth.model.AuthenticationRequest;
+import br.com.institutopalmeirim.security.auth.model.AuthenticationResponse;
+import br.com.institutopalmeirim.security.auth.model.RegisterRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -86,16 +88,15 @@ public class AuthenticationService {
         tokenRepository.saveAll(validUserTokens);
     }
 
-    public void refreshToken(
-            HttpServletRequest request,
-            HttpServletResponse response
-    ) throws IOException {
+    public void refreshToken(HttpServletRequest request, HttpServletResponse response) throws IOException {
         final String authHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
         final String refreshToken;
         final String userEmail;
+
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             return;
         }
+
         refreshToken = authHeader.substring(7);
         userEmail = jwtService.extractUsername(refreshToken);
         if (userEmail != null) {

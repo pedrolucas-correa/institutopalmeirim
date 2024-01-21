@@ -1,6 +1,10 @@
-package br.com.institutopalmeirim.security.auth;
+package br.com.institutopalmeirim.security.auth.controller;
 
 import br.com.institutopalmeirim.data.enums.Role;
+import br.com.institutopalmeirim.security.auth.model.AuthenticationRequest;
+import br.com.institutopalmeirim.security.auth.model.AuthenticationResponse;
+import br.com.institutopalmeirim.security.service.AuthenticationService;
+import br.com.institutopalmeirim.security.auth.model.RegisterRequest;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

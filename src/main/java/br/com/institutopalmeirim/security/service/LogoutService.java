@@ -1,4 +1,4 @@
-package br.com.institutopalmeirim.security.config;
+package br.com.institutopalmeirim.security.service;
 
 import br.com.institutopalmeirim.data.repository.TokenRepository;
 import jakarta.servlet.http.HttpServletRequest;

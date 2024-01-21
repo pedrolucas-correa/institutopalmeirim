@@ -1,4 +1,4 @@
-package br.com.institutopalmeirim.security.auth;
+package br.com.institutopalmeirim.security.auth.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

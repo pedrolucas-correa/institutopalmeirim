@@ -1,4 +1,4 @@
-package br.com.institutopalmeirim.security.auth;
+package br.com.institutopalmeirim.security.auth.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

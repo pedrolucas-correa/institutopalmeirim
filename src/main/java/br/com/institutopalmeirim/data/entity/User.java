@@ -24,18 +24,21 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_GENERATOR")
     private Integer id;
-    private String password;
+
     private String name;
     @Temporal(TemporalType.DATE)
     private LocalDate birthdate;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
     @Column(unique = true)
     private String rg;
     @Column(unique = true)
     private String cpf;
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
+
     @Column(unique = true)
     private String email;
+    private String password;
+
     private String phone;
 
     @Enumerated(EnumType.STRING)
