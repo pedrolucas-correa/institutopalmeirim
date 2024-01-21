@@ -11,8 +11,8 @@
     <groupId>br.com</groupId>
     <artifactId>institutopalmeirim</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Instituto Palmerim</name>
-    <description>Website for Instituto Palmerim</description>
+    <name>Instituto Palmeirim</name>
+    <description>ERP Instituto Palmeirim</description>
     <properties>
         <java.version>21</java.version>
     </properties>
