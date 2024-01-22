@@ -20,7 +20,6 @@ public class Clinic {
     private Integer id;
 
     private String name;
-    private String fantasyName;
     @Column(length = 14)
     private String cnpj;
 

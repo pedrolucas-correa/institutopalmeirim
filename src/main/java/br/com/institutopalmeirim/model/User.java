@@ -42,6 +42,10 @@ public class User implements UserDetails {
     private String email;
     private String password;
 
+    @ManyToOne
+    @JoinColumn(name = "address_id")
+    private Address address;
+
     @Enumerated(EnumType.STRING)
     private UserCategory category;
 

@@ -26,9 +26,4 @@ public class Address {
     private String city;
     private String state;
     private String complement;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
 }
