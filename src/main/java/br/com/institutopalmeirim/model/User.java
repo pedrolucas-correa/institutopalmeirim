@@ -33,8 +33,9 @@ public class User implements UserDetails {
     private Gender gender;
     @Column(unique = true)
     private String rg;
-    @Column(unique = true)
+    @Column(unique = true, length = 11)
     private String cpf;
+    @Column(unique = true, length = 11)
     private String phone;
 
     @Column(unique = true)

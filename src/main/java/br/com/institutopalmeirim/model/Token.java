@@ -12,10 +12,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "token", schema = "profile")
+@SequenceGenerator(name = "TOKEN_GENERATOR", sequenceName = "TOKEN_SEQ", allocationSize = 1)
 public class Token {
 
   @Id
-  @GeneratedValue
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "TOKEN_GENERATOR")
   public Integer id;
 
   @Column(unique = true)
